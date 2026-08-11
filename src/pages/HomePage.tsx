@@ -12,7 +12,7 @@ const ITEL_A100C_IMAGE = '/images/itel-a100c.png?v=2'
 const HERO_SAMSUNG = [
   {
     name: 'Hero 1',
-    src: '/images/hero-samsung/hero-1.png?v=2',
+    src: '/images/hero-samsung/hero-1.png?v=3',
     swatch: '#c8d6e5',
     className: 'max-h-[480px] w-[130%] max-w-none scale-125 lg:max-h-[560px] lg:scale-[1.35]',
   },
