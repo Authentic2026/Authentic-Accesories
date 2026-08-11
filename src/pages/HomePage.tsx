@@ -7,7 +7,6 @@ import ColorCycleImage from '../components/ColorCycleImage'
 import { HERO_IMAGE, products } from '../data/products'
 
 const SLIDE2_IMAGE = '/images/slide2-phones.png?v=3'
-const SLIDE3_IMAGE = '/images/slide3-phones.png?v=2'
 const ITEL_A100C_IMAGE = '/images/itel-a100c.png?v=2'
 const HERO_SAMSUNG = [
   {
@@ -65,14 +64,6 @@ const slides = [
     image: SLIDE2_IMAGE,
     alt: 'Redmi smartphones collection',
     href: '/shop',
-  },
-  {
-    eyebrow: 'Samsung Collection',
-    title: 'Style in Every Shade',
-    text: 'Explore Samsung devices with premium build and Authentic support — ready for pickup or delivery.',
-    image: SLIDE3_IMAGE,
-    alt: 'Samsung smartphones collection',
-    href: '/shop?brand=Samsung',
   },
 ]
 
@@ -228,11 +219,12 @@ export default function HomePage() {
               to="/shop?category=Accessories"
               className="group relative min-h-[280px] overflow-hidden rounded-3xl shadow-lg"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-brand-700 via-brand-800 to-[#06140f]" />
-              <div className="absolute inset-0 opacity-40" style={{
-                backgroundImage:
-                  'radial-gradient(circle at 70% 40%, rgba(212,175,55,0.35), transparent 45%), radial-gradient(circle at 30% 70%, rgba(255,255,255,0.08), transparent 40%)',
-              }} />
+              <img
+                src="/images/category-accessories.png?v=2"
+                alt="Accessories"
+                className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent" />
               <div className="relative flex h-full min-h-[280px] flex-col justify-end p-8">
                 <h3 className="text-3xl font-extrabold text-white">Accessories</h3>
                 <p className="mt-1 text-sm text-white/80">Chargers, cables and cases.</p>
