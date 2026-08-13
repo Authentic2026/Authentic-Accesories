@@ -22,7 +22,7 @@ export default function RegisterPage() {
   return (
     <section className="mx-auto max-w-lg px-4 py-12">
       <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
-        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Join Authentic</p>
+        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Join Authentic Retailers</p>
         <h1 className="mt-2 text-2xl font-bold text-brand-600">Create an account</h1>
         <p className="mt-1 text-sm text-slate-500">
           Sign up to track orders, save wishlists, and checkout faster.

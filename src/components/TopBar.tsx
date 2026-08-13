@@ -8,7 +8,7 @@ export default function TopBar() {
         <div className="hidden items-center gap-5 md:flex">
           <span className="inline-flex items-center gap-1.5 text-white/90">
             <ShieldCheck size={13} className="text-accent" />
-            Trusted Authentic devices &amp; accessories
+            Trusted Authentic Retailers devices &amp; accessories
           </span>
           <span className="inline-flex items-center gap-1.5 text-white/90">
             <Truck size={13} className="text-accent" />

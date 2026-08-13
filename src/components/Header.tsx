@@ -121,7 +121,7 @@ export default function Header() {
           <button type="button" className="absolute inset-0 bg-black/50" onClick={() => setOpen(false)} aria-label="Close" />
           <div className="absolute left-0 top-0 flex h-full w-80 max-w-[85%] flex-col bg-white shadow-xl">
             <div className="flex items-center justify-between border-b border-slate-100 px-4 py-4">
-              <span className="font-bold text-brand-600">Authentic Menu</span>
+              <span className="font-bold text-brand-600">Authentic Retailers</span>
               <button type="button" onClick={() => setOpen(false)} className="text-slate-500">
                 <X size={22} />
               </button>

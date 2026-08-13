@@ -4,6 +4,8 @@ const brands = [
   { name: 'Samsung', src: '/images/brands/samsung.png' },
   { name: 'itel', src: '/images/brands/itel.png' },
   { name: 'Redmi', src: '/images/brands/redmi.png' },
+  { name: 'Tecno', src: '/images/brands/tecno.svg' },
+  { name: 'Infinix', src: '/images/brands/infinix.svg' },
   { name: 'Oking', src: '/images/brands/oking.png' },
 ]
 
@@ -14,7 +16,7 @@ export default function FeaturedBrands() {
         <div className="mb-8 text-center">
           <h2 className="text-2xl font-semibold text-brand-600">Featured Brands</h2>
           <p className="mt-1 text-sm text-slate-500">
-            Explore devices and accessories from trusted Authentic partners
+            Explore devices and accessories from trusted Authentic Retailers partners
           </p>
         </div>
         <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">

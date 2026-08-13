@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 
-const LOGO_SRC = '/images/logo.png?v=1'
+const LOGO_SRC = '/images/logo.png?v=2'
 
 type LogoProps = {
   to?: string
@@ -14,18 +14,18 @@ type LogoProps = {
 export default function Logo({
   to = '/',
   className = '',
-  imageClassName = 'h-11 w-11 object-contain sm:h-12 sm:w-12',
+  imageClassName = 'h-12 w-12 object-contain sm:h-14 sm:w-14',
   showWordmark = true,
   wordmarkClassName = 'text-brand-600',
   sublabel,
 }: LogoProps) {
   const content = (
     <>
-      <img src={LOGO_SRC} alt="Authentic" className={imageClassName} />
+      <img src={LOGO_SRC} alt="Authentic Retailers" className={imageClassName} />
       {showWordmark && (
         <div className="leading-tight">
-          <span className={`block text-lg font-extrabold tracking-tight ${wordmarkClassName}`}>
-            Authentic
+          <span className={`block text-[15px] font-extrabold tracking-tight sm:text-lg ${wordmarkClassName}`}>
+            Authentic Retailers
           </span>
           {sublabel && (
             <span className="hidden text-[10px] font-medium uppercase tracking-[0.18em] text-accent sm:block">

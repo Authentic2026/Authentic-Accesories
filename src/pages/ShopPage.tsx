@@ -35,9 +35,9 @@ export default function ShopPage() {
     <>
       <section className="border-b border-slate-200 bg-gradient-to-r from-brand-50 to-white">
         <div className="mx-auto max-w-7xl px-4 py-10">
-          <h1 className="text-3xl font-bold text-brand-600">Discover the latest Authentic devices</h1>
+          <h1 className="text-3xl font-bold text-brand-600">Discover the latest Authentic Retailers devices</h1>
           <p className="mt-2 max-w-2xl text-sm text-slate-600">
-            Browse smartphones and accessories curated for Authentic customers. Use
+            Browse smartphones and accessories curated for Authentic Retailers customers. Use
             filters to narrow down by category, price, or brand.
           </p>
         </div>

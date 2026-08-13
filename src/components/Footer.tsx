@@ -10,13 +10,13 @@ export default function Footer() {
         <div>
           <div className="mb-3">
             <Logo
-              imageClassName="h-12 w-12 object-contain"
+              imageClassName="h-12 w-12 rounded-lg bg-white object-contain p-0.5"
               wordmarkClassName="text-white"
               sublabel="Online Store"
             />
           </div>
           <p className="text-sm text-white/70 leading-relaxed">
-            Shop smartphones and accessories from Authentic — secure payments,
+            Shop smartphones and accessories from Authentic Retailers — secure payments,
             store pickup and reliable local support.
           </p>
         </div>
@@ -95,7 +95,7 @@ export default function Footer() {
           <p>
             © {new Date().getFullYear()} {CONTACT.company}. All rights reserved.
           </p>
-          <p>Authentic™ and related marks are trademarks of {CONTACT.company}.</p>
+          <p>Authentic Retailers™ and related marks are trademarks of {CONTACT.company}.</p>
         </div>
       </div>
     </footer>

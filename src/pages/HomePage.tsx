@@ -18,6 +18,14 @@ const HERO_SAMSUNG = [
   { name: 'Hero 2', src: '/images/hero-samsung/hero-2.png?v=1', swatch: '#6b4d7a' },
   { name: 'Hero 3', src: '/images/hero-samsung/hero-3.png?v=2', swatch: '#3a3d42' },
 ]
+const itelSuper26Ultra = products.find((p) => p.id === 'itel-super-26-ultra')
+const redmiA5 = products.find((p) => p.id === 'redmi-a5')
+const redmi14c = products.find((p) => p.id === 'redmi-14c')
+const tecnoSparkGo3 = products.find((p) => p.id === 'tecno-spark-go-3')
+const tecnoSpark40 = products.find((p) => p.id === 'tecno-spark-40')
+const infinixSmart10 = products.find((p) => p.id === 'infinix-smart-10')
+const infinixHot60 = products.find((p) => p.id === 'infinix-hot-60')
+const itelA50 = products.find((p) => p.id === 'itel-a50')
 const itelA90 = products.find((p) => p.id === 'itel-a90')
 const galaxyA07 = products.find((p) => p.id === 'samsung-a07-64')
 
@@ -30,6 +38,78 @@ const slides = [
     colorImages: HERO_SAMSUNG,
     alt: 'Samsung Galaxy collection',
     href: '/shop?brand=Samsung',
+  },
+  {
+    eyebrow: 'itel Super 26 Ultra',
+    title: '144Hz 1.5K Curved AMOLED.',
+    text: '6,000mAh, T7300 6nm and a 50MP camera — in Sapphire Black Blue, Blush Pink Gold, White Marble and Moonstone Silver.',
+    image: itelSuper26Ultra?.image ?? HERO_IMAGE,
+    colorImages: itelSuper26Ultra?.colorImages,
+    alt: 'itel Super 26 Ultra colour collection',
+    href: '/product/itel-super-26-ultra',
+  },
+  {
+    eyebrow: 'Redmi A5',
+    title: 'Big Screen. Everyday Value.',
+    text: '6.88" 120Hz display, 32MP camera and 5200mAh — in Ocean Blue, Lake Green, Sandy Gold and Midnight Black.',
+    image: redmiA5?.image ?? HERO_IMAGE,
+    colorImages: redmiA5?.colorImages,
+    alt: 'Redmi A5 colour collection',
+    href: '/product/redmi-a5',
+  },
+  {
+    eyebrow: 'Redmi 14C',
+    title: '50MP AI Camera. 120Hz.',
+    text: '6.88" display, Helio G81 Ultra and 5160mAh with 18W PD — in Midnight Black, Sage Green, Dreamy Purple and Starry Blue.',
+    image: redmi14c?.image ?? HERO_IMAGE,
+    colorImages: redmi14c?.colorImages,
+    alt: 'Redmi 14C colour collection',
+    href: '/product/redmi-14c',
+  },
+  {
+    eyebrow: 'Tecno Spark Go 3',
+    title: '120Hz. Four Colours.',
+    text: '6.75" Dot Notch, T7250 and 5000mAh with 15W Type-C — in Ink Black, Titanium Grey, Aurora Purple and Galaxy Blue.',
+    image: tecnoSparkGo3?.image ?? HERO_IMAGE,
+    colorImages: tecnoSparkGo3?.colorImages,
+    alt: 'Tecno Spark Go 3 colour collection',
+    href: '/product/tecno-spark-go-3',
+  },
+  {
+    eyebrow: 'Tecno Spark 40',
+    title: '50MP. 45W Super Charging.',
+    text: '120Hz 6.67" hole screen and 5200mAh — in Ink Black, Titanium Grey, Veil White, Mirage Blue and Sunlight Orange.',
+    image: tecnoSpark40?.image ?? HERO_IMAGE,
+    colorImages: tecnoSpark40?.colorImages,
+    alt: 'Tecno Spark 40 colour collection',
+    href: '/product/tecno-spark-40',
+  },
+  {
+    eyebrow: 'Infinix Smart 10',
+    title: '120Hz. IP64. Everyday Tough.',
+    text: '6.67" display, 5000mAh and 15W charging — in Sleek Black, Titanium Silver, Iris Blue and Twilight Gold.',
+    image: infinixSmart10?.image ?? HERO_IMAGE,
+    colorImages: infinixSmart10?.colorImages,
+    alt: 'Infinix Smart 10 colour collection',
+    href: '/product/infinix-smart-10',
+  },
+  {
+    eyebrow: 'Infinix Hot 60',
+    title: '5G. Dimensity 7020.',
+    text: '6.7" 120Hz display, 50MP camera and 5200mAh — in Sleek Black, Tundra Green, Shadow Blue and Caramel Glow.',
+    image: infinixHot60?.image ?? HERO_IMAGE,
+    colorImages: infinixHot60?.colorImages,
+    alt: 'Infinix Hot 60 colour collection',
+    href: '/product/infinix-hot-60',
+  },
+  {
+    eyebrow: 'itel A50',
+    title: 'Awesome. Everyday 4G.',
+    text: '6.6" display, T603 octa-core and 5000mAh — in Lime Green, Shimmer Gold, Misty Black and Cyan Blue.',
+    image: itelA50?.image ?? HERO_IMAGE,
+    colorImages: itelA50?.colorImages,
+    alt: 'itel A50 colour collection',
+    href: '/product/itel-a50',
   },
   {
     eyebrow: 'itel A90',
