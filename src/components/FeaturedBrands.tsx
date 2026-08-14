@@ -1,7 +1,12 @@
 import { Link } from 'react-router-dom'
 
 const brands = [
-  { name: 'Samsung', src: '/images/brands/samsung.png', imgClassName: 'h-full w-full max-h-none object-contain p-1' },
+  {
+    name: 'Samsung',
+    src: '/images/brands/samsung.png?v=2',
+    // Wordmark is ~6.5:1, so it fills the tile on width rather than height.
+    imgClassName: 'h-auto w-full max-h-none scale-125 object-contain',
+  },
   { name: 'itel', src: '/images/brands/itel.png' },
   { name: 'Redmi', src: '/images/brands/redmi.png' },
   { name: 'Tecno', src: '/images/brands/tecno.svg' },
