@@ -6,38 +6,47 @@ import FeaturedBrands from '../components/FeaturedBrands'
 import ColorCycleImage from '../components/ColorCycleImage'
 import { HERO_IMAGE, products } from '../data/products'
 
-const SLIDE2_IMAGE = '/images/slide2-phones.png?v=3'
 const ITEL_A100C_IMAGE = '/images/itel-a100c.png?v=2'
-const HERO_SAMSUNG = [
+const OPPO_FIND_X9_ULTRA = [
+  { name: 'Front & back', src: '/images/oppo-find-x9-ultra/pair.png', swatch: '#2b2b2b' },
+  { name: 'Global version', src: '/images/oppo-find-x9-ultra/pair-global.png', swatch: '#c07a3e' },
   {
-    name: 'Hero 1',
-    src: '/images/hero-samsung/hero-1.png?v=3',
-    swatch: '#c8d6e5',
-    className: 'max-h-[480px] w-[130%] max-w-none scale-125 lg:max-h-[560px] lg:scale-[1.35]',
+    name: 'Hasselblad teleconverter',
+    src: '/images/oppo-find-x9-ultra/lens-attached.png',
+    swatch: '#3f4038',
   },
-  { name: 'Hero 2', src: '/images/hero-samsung/hero-2.png?v=1', swatch: '#6b4d7a' },
-  { name: 'Hero 3', src: '/images/hero-samsung/hero-3.png?v=2', swatch: '#3a3d42' },
+  {
+    name: 'Imaging kit',
+    src: '/images/oppo-find-x9-ultra/lens-kit-exploded.png',
+    swatch: '#d8d8d8',
+  },
+  { name: 'Pro accessory set', src: '/images/oppo-find-x9-ultra/lens-kit.png', swatch: '#eaeaea' },
 ]
 const itelSuper26Ultra = products.find((p) => p.id === 'itel-super-26-ultra')
-const redmiA5 = products.find((p) => p.id === 'redmi-a5')
-const redmi14c = products.find((p) => p.id === 'redmi-14c')
 const tecnoSparkGo3 = products.find((p) => p.id === 'tecno-spark-go-3')
 const tecnoSpark40 = products.find((p) => p.id === 'tecno-spark-40')
-const infinixSmart10 = products.find((p) => p.id === 'infinix-smart-10')
-const infinixHot60 = products.find((p) => p.id === 'infinix-hot-60')
 const itelA50 = products.find((p) => p.id === 'itel-a50')
 const itelA90 = products.find((p) => p.id === 'itel-a90')
-const galaxyA07 = products.find((p) => p.id === 'samsung-a07-64')
+const galaxyWatch8 = products.find((p) => p.id === 'samsung-galaxy-watch-8')
 
 const slides = [
   {
-    eyebrow: 'Premium Devices',
-    title: 'Upgrade Your Tech Today',
-    text: 'Discover the latest smartphones and devices. Premium quality, competitive prices, and reliable Authentic support.',
-    image: HERO_SAMSUNG[0].src,
-    colorImages: HERO_SAMSUNG,
-    alt: 'Samsung Galaxy collection',
-    href: '/shop?brand=Samsung',
+    eyebrow: 'Now at Authentic Retailers',
+    title: 'Hasselblad Power. Ultra Everything.',
+    text: 'Meet the OPPO Find X9 Ultra — a true Hasselblad quad-camera flagship built for photographers who refuse to compromise.',
+    image: OPPO_FIND_X9_ULTRA[0].src,
+    colorImages: OPPO_FIND_X9_ULTRA,
+    alt: 'OPPO Find X9 Ultra',
+    href: '/shop',
+  },
+  {
+    eyebrow: 'Samsung Galaxy Watch 8',
+    title: 'Powerful Insights. Elevated Feel.',
+    text: '44mm Silver with white sport band — Super AMOLED, Exynos W1000, Wear OS 6 and advanced health sensors.',
+    image: galaxyWatch8?.image ?? HERO_IMAGE,
+    colorImages: galaxyWatch8?.colorImages,
+    alt: 'Samsung Galaxy Watch 8',
+    href: '/product/samsung-galaxy-watch-8',
   },
   {
     eyebrow: 'itel Super 26 Ultra',
@@ -47,24 +56,6 @@ const slides = [
     colorImages: itelSuper26Ultra?.colorImages,
     alt: 'itel Super 26 Ultra colour collection',
     href: '/product/itel-super-26-ultra',
-  },
-  {
-    eyebrow: 'Redmi A5',
-    title: 'Big Screen. Everyday Value.',
-    text: '6.88" 120Hz display, 32MP camera and 5200mAh — in Ocean Blue, Lake Green, Sandy Gold and Midnight Black.',
-    image: redmiA5?.image ?? HERO_IMAGE,
-    colorImages: redmiA5?.colorImages,
-    alt: 'Redmi A5 colour collection',
-    href: '/product/redmi-a5',
-  },
-  {
-    eyebrow: 'Redmi 14C',
-    title: '50MP AI Camera. 120Hz.',
-    text: '6.88" display, Helio G81 Ultra and 5160mAh with 18W PD — in Midnight Black, Sage Green, Dreamy Purple and Starry Blue.',
-    image: redmi14c?.image ?? HERO_IMAGE,
-    colorImages: redmi14c?.colorImages,
-    alt: 'Redmi 14C colour collection',
-    href: '/product/redmi-14c',
   },
   {
     eyebrow: 'Tecno Spark Go 3',
@@ -83,24 +74,6 @@ const slides = [
     colorImages: tecnoSpark40?.colorImages,
     alt: 'Tecno Spark 40 colour collection',
     href: '/product/tecno-spark-40',
-  },
-  {
-    eyebrow: 'Infinix Smart 10',
-    title: '120Hz. IP64. Everyday Tough.',
-    text: '6.67" display, 5000mAh and 15W charging — in Sleek Black, Titanium Silver, Iris Blue and Twilight Gold.',
-    image: infinixSmart10?.image ?? HERO_IMAGE,
-    colorImages: infinixSmart10?.colorImages,
-    alt: 'Infinix Smart 10 colour collection',
-    href: '/product/infinix-smart-10',
-  },
-  {
-    eyebrow: 'Infinix Hot 60',
-    title: '5G. Dimensity 7020.',
-    text: '6.7" 120Hz display, 50MP camera and 5200mAh — in Sleek Black, Tundra Green, Shadow Blue and Caramel Glow.',
-    image: infinixHot60?.image ?? HERO_IMAGE,
-    colorImages: infinixHot60?.colorImages,
-    alt: 'Infinix Hot 60 colour collection',
-    href: '/product/infinix-hot-60',
   },
   {
     eyebrow: 'itel A50',
@@ -127,23 +100,6 @@ const slides = [
     image: ITEL_A100C_IMAGE,
     alt: 'itel A100c smartphones',
     href: '/product/itel-a100c',
-  },
-  {
-    eyebrow: 'Samsung Galaxy A07',
-    title: 'Big Screen. All-Day Battery.',
-    text: '6.7" 90Hz display, 50MP camera, 5000mAh and 25W charging — Galaxy A07 4GB/64GB, ready at Authentic.',
-    image: galaxyA07?.image ?? HERO_IMAGE,
-    colorImages: galaxyA07?.colorImages,
-    alt: 'Samsung Galaxy A07',
-    href: '/product/samsung-a07-4-64gb',
-  },
-  {
-    eyebrow: 'New Arrivals',
-    title: 'More Colours. More Choice.',
-    text: 'Browse the latest smartphones in every shade — blue, black, mint and more — ready for pickup or delivery.',
-    image: SLIDE2_IMAGE,
-    alt: 'Redmi smartphones collection',
-    href: '/shop',
   },
 ]
 

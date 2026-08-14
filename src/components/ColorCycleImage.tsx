@@ -38,7 +38,7 @@ export default function ColorCycleImage({
           key={img.src}
           src={img.src}
           alt={`${alt} — ${img.name}`}
-          className={`${imgClassName} ${img.className ?? ''} mx-auto drop-shadow-xl transition-opacity duration-700 ${
+          className={`${imgClassName} ${img.className ?? ''} mx-auto drop-shadow-xl transition-opacity duration-1000 ease-in-out ${
             i === 0 ? 'relative' : 'absolute inset-0 m-auto'
           } ${i === index ? 'opacity-100' : 'opacity-0'}`}
         />
