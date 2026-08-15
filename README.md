@@ -23,6 +23,15 @@ npm run dev
 
 Then open the URL shown in the terminal (usually `http://localhost:5173`).
 
+## Deploy (Cloudflare Workers)
+
+```bash
+npx wrangler login
+npm run deploy
+```
+
+This builds the Vite app and deploys it to `authentic-accesories` on your `*.workers.dev` subdomain.
+
 ## Features
 
 - Home, Shop (filters), Product detail
