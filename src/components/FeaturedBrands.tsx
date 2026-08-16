@@ -4,7 +4,6 @@ const brands = [
   {
     name: 'Samsung',
     src: '/images/brands/samsung.png?v=2',
-    // Wordmark is ~6.5:1, so it fills the tile on width rather than height.
     imgClassName: 'h-auto w-full max-h-none scale-125 object-contain',
   },
   { name: 'itel', src: '/images/brands/itel.png' },
@@ -14,27 +13,29 @@ const brands = [
   { name: 'Oking', src: '/images/brands/oking.png' },
 ]
 
-export default function FeaturedBrands() {
+export default function FeaturedBrands({ compact = false }: { compact?: boolean }) {
   return (
-    <section className="border-t border-slate-200 bg-white py-12">
-      <div className="mx-auto max-w-7xl px-4">
-        <div className="mb-8 text-center">
-          <h2 className="text-2xl font-semibold text-brand-600">Featured Brands</h2>
-          <p className="mt-1 text-sm text-slate-500">
-            Explore devices and accessories from trusted Authentic Retailers partners
-          </p>
-        </div>
-        <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
+    <section className={compact ? 'py-8' : 'section-pad border-t border-slate-200 bg-white'}>
+      <div className="store-container">
+        {!compact && (
+          <div className="mb-6 text-center">
+            <h2 className="text-2xl font-bold text-brand-800">Featured brands</h2>
+            <p className="mt-1 text-sm text-slate-500">
+              Devices and accessories from trusted Authentic Retailers partners
+            </p>
+          </div>
+        )}
+        <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
           {brands.map((brand) => (
             <Link
               key={brand.name}
               to={`/shop?brand=${encodeURIComponent(brand.name)}`}
-              className="flex h-20 w-36 items-center justify-center rounded-xl border border-slate-200 bg-white px-4 py-3 shadow-sm transition hover:border-accent hover:shadow-md"
+              className="flex h-16 w-28 items-center justify-center rounded-lg border border-slate-200 bg-white px-3 py-2 shadow-sm transition hover:border-brand-300 hover:shadow-md sm:h-20 sm:w-36"
             >
               <img
                 src={brand.src}
                 alt={`${brand.name} logo`}
-                className={brand.imgClassName ?? 'max-h-12 max-w-full object-contain'}
+                className={brand.imgClassName ?? 'max-h-10 max-w-full object-contain sm:max-h-12'}
               />
             </Link>
           ))}

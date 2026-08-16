@@ -23,17 +23,17 @@ export default function LoginPage() {
 
   return (
     <>
-      <section className="mx-auto grid max-w-7xl gap-10 px-4 py-12 lg:grid-cols-2 lg:items-center">
+      <section className="store-container grid gap-10 py-12 lg:grid-cols-2 lg:items-center">
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
             Authentic Retailers Customer Portal
           </p>
-          <h1 className="mt-3 text-3xl font-bold text-brand-600 sm:text-4xl">
+          <h1 className="mt-3 text-3xl font-bold text-brand-800 sm:text-4xl">
             Manage your Authentic Retailers experience with confidence
           </h1>
           <p className="mt-3 text-sm text-slate-600">
-            Access device bundles, track your orders, and manage payments all in one secure
-            dashboard built for Authentic Retailers customers.
+            Access device bundles, track your orders, and manage payments all in one secure dashboard
+            built for Authentic Retailers customers.
           </p>
           <ul className="mt-6 space-y-3 text-sm text-slate-600">
             {[
@@ -49,9 +49,9 @@ export default function LoginPage() {
           </ul>
         </div>
 
-        <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+        <div className="panel p-6 sm:p-8">
           <p className="text-xs font-medium uppercase tracking-wider text-slate-400">Welcome back</p>
-          <h2 className="mt-1 text-xl font-semibold text-brand-600">Sign in to continue</h2>
+          <h2 className="mt-1 text-xl font-bold text-brand-800">Sign in to continue</h2>
           <p className="mt-1 text-sm text-slate-500">
             Enter your email and password to access your Authentic Retailers account.
           </p>
@@ -109,7 +109,7 @@ export default function LoginPage() {
           </p>
         </div>
       </section>
-      <FeaturedBrands />
+      <FeaturedBrands compact />
     </>
   )
 }

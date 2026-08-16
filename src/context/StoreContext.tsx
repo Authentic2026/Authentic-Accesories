@@ -7,7 +7,7 @@ import {
   useState,
   type ReactNode,
 } from 'react'
-import { USD_TO_ZWG, type Product } from '../data/products'
+import { USD_TO_ZWG, products as catalog, type Product } from '../data/products'
 
 export type Currency = 'USD' | 'ZWG'
 
@@ -159,6 +159,15 @@ export function StoreProvider({ children }: { children: ReactNode }) {
 
   const cartCount = useMemo(() => cart.reduce((s, i) => s + i.quantity, 0), [cart])
 
+  const cartTotal = useMemo(
+    () =>
+      cart.reduce((sum, item) => {
+        const product = catalog.find((p) => p.id === item.productId)
+        return product ? sum + product.price * item.quantity : sum
+      }, 0),
+    [cart],
+  )
+
   const value = useMemo<StoreContextValue>(
     () => ({
       currency,
@@ -167,7 +176,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       cart,
       wishlist,
       cartCount,
-      cartTotal: 0,
+      cartTotal,
       addToCart,
       removeFromCart,
       updateQty,
@@ -187,6 +196,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       cart,
       wishlist,
       cartCount,
+      cartTotal,
       addToCart,
       removeFromCart,
       updateQty,

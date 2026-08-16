@@ -5,7 +5,7 @@ import SupportFab from './SupportFab'
 
 export default function Layout() {
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="flex min-h-screen flex-col bg-slate-50">
       <Header />
       <main className="flex-1">
         <Outlet />

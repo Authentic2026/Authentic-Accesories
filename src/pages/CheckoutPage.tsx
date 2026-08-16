@@ -12,27 +12,31 @@ export default function CheckoutPage() {
 
   if (items.length === 0 && !done) {
     return (
-      <div className="mx-auto max-w-7xl px-4 py-20 text-center">
-        <h1 className="text-2xl font-semibold text-brand-600">Nothing to checkout</h1>
-        <Link to="/shop" className="btn-primary mt-6 inline-flex">
-          Browse shop
-        </Link>
+      <div className="store-container py-20 text-center">
+        <div className="panel mx-auto max-w-md p-10">
+          <h1 className="text-2xl font-semibold text-brand-800">Nothing to checkout</h1>
+          <Link to="/shop" className="btn-primary mt-6 inline-flex">
+            Browse shop
+          </Link>
+        </div>
       </div>
     )
   }
 
   if (done) {
     return (
-      <div className="mx-auto max-w-lg px-4 py-20 text-center">
-        <CheckCircle2 className="mx-auto text-accent" size={48} />
-        <h1 className="mt-4 text-2xl font-bold text-brand-600">Order received</h1>
-        <p className="mt-2 text-sm text-slate-600">
-          Thank you for shopping with Authentic. Our team will contact you on {CONTACT.phone} to
-          confirm pickup or delivery.
-        </p>
-        <Link to="/shop" className="btn-primary mt-8 inline-flex">
-          Continue shopping
-        </Link>
+      <div className="store-container py-20">
+        <div className="panel mx-auto max-w-lg p-10 text-center">
+          <CheckCircle2 className="mx-auto text-accent" size={48} />
+          <h1 className="mt-4 text-2xl font-bold text-brand-800">Order received</h1>
+          <p className="mt-2 text-sm text-slate-600">
+            Thank you for shopping with Authentic. Our team will contact you on {CONTACT.phone} to
+            confirm pickup or delivery.
+          </p>
+          <Link to="/shop" className="btn-primary mt-8 inline-flex">
+            Continue shopping
+          </Link>
+        </div>
       </div>
     )
   }
@@ -44,11 +48,22 @@ export default function CheckoutPage() {
   }
 
   return (
-    <section className="mx-auto max-w-7xl px-4 py-10">
-      <h1 className="mb-8 text-2xl font-bold text-brand-600">Checkout</h1>
+    <section className="store-container py-8">
+      <nav className="mb-3 text-xs font-medium text-slate-500">
+        <Link to="/" className="hover:text-brand-600">
+          Home
+        </Link>
+        <span className="mx-2">/</span>
+        <Link to="/cart" className="hover:text-brand-600">
+          Cart
+        </Link>
+        <span className="mx-2">/</span>
+        <span className="text-brand-700">Checkout</span>
+      </nav>
+      <h1 className="mb-8 text-2xl font-bold text-brand-800">Checkout</h1>
       <div className="grid gap-8 lg:grid-cols-[1fr_320px]">
-        <form onSubmit={onSubmit} className="space-y-4 rounded-xl border border-slate-200 bg-white p-6">
-          <h2 className="font-semibold text-brand-700">Contact &amp; fulfilment</h2>
+        <form onSubmit={onSubmit} className="panel space-y-4 p-6">
+          <h2 className="font-bold text-brand-800">Contact &amp; fulfilment</h2>
           <div className="grid gap-4 sm:grid-cols-2">
             <label className="block text-sm sm:col-span-2">
               <span className="mb-1 block font-medium text-slate-600">Full name</span>
@@ -56,12 +71,7 @@ export default function CheckoutPage() {
             </label>
             <label className="block text-sm">
               <span className="mb-1 block font-medium text-slate-600">Email</span>
-              <input
-                type="email"
-                required
-                defaultValue={user?.email || ''}
-                className="input-field"
-              />
+              <input type="email" required defaultValue={user?.email || ''} className="input-field" />
             </label>
             <label className="block text-sm">
               <span className="mb-1 block font-medium text-slate-600">Phone</span>
@@ -84,8 +94,8 @@ export default function CheckoutPage() {
           </button>
         </form>
 
-        <aside className="h-fit rounded-xl border border-slate-200 bg-white p-5">
-          <h2 className="font-semibold text-brand-600">Your order</h2>
+        <aside className="panel h-fit p-5">
+          <h2 className="font-bold text-brand-800">Your order</h2>
           <ul className="mt-4 space-y-3 text-sm">
             {items.map(({ product, quantity }) => (
               <li key={product.id} className="flex justify-between gap-3">
@@ -98,7 +108,7 @@ export default function CheckoutPage() {
               </li>
             ))}
           </ul>
-          <div className="mt-4 flex justify-between border-t border-slate-200 pt-3 font-bold text-brand-700">
+          <div className="mt-4 flex justify-between border-t border-slate-200 pt-3 font-bold text-brand-800">
             <span>Total</span>
             <span>{formatPrice(total)}</span>
           </div>
