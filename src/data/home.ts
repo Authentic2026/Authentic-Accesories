@@ -1,17 +1,12 @@
 import {
-  BatteryCharging,
   BatteryFull,
   Briefcase,
-  Cable,
   Camera,
   Cpu,
   GraduationCap,
   Palette,
-  Shield,
   ShieldCheck,
   Smartphone,
-  Tag,
-  Watch,
 } from 'lucide-react'
 import { products, type Product } from './products'
 import type { CategoryTile } from '../components/CategoryTiles'
